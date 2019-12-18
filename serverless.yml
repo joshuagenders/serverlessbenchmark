@@ -1,0 +1,31 @@
+service: serverlessbenchmark
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+
+package:
+  individually: true
+  exclude:
+    - isolate*.log
+functions:
+  fn1:
+    handler: /packages/fn1/handler.hello
+  # fn2:
+  #   handler: /packages/fn2/handler.hello
+  # fn3:
+  #   handler: /packages/fn3/handler.hello
+  # fn4:
+  #   handler: /packages/fn4/handler.hello
+  # fn5:
+  #   handler: /packages/fn5/handler.hello
+  # fn6:
+  #   handler: /packages/fn6/handler.hello
+  # fn7:
+  #   handler: /packages/fn7/handler.hello
+  # fn8:
+  #   handler: /packages/fn8/handler.hello
+  # fn9:
+  #   handler: /packages/fn9/handler.hello
+  # fn10:
+  #   handler: /packages/fn10/handler.hello

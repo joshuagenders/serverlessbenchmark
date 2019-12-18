@@ -1,0 +1,17 @@
+{
+  "name": "serverlessbenchmark",
+  "version": "1.0.0",
+  "scripts": {
+    "package": "node --prof ./node_modules/serverless/bin/serverless.js package",
+    "visual": "node --prof-process --preprocess -j isolate*.log | npx flamebearer",
+    "dockerbuild": "docker build -t serverlessbenchmark .",
+    "dockerextract": "docker exec -v ${PWD}:/data serverlessbenchmark npm run package && cp isolate*.log /data/"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless": "^1.59.3"
+  },
+  "dependencies": {},
+  "description": ""
+}
